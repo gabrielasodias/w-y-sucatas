@@ -1,0 +1,119 @@
+/* ... seu CSS anterior ... */
+
+/* Estilo geral da seção */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Container do texto e das novas informações de contato */
+.about-text,
+.contact-info {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo do container do texto */
+.about-text {
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    color: var(--marrom-escuro);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo do novo container de contato */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.location-info,
+.google-page {
+    border: 1px solid var(--cinza-claro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--cinza-claro);
+}
+
+.location-info a {
+    text-decoration: none;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--marrom-escuro);
+}
+
+.google-page a {
+    text-decoration: none;
+}
+
+/* Responsividade: Telas maiores que 768px */
+@media (min-width: 768px) {
+    .about {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-text,
+    .contact-info {
+        width: 45%;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    /* Solução para larguras iguais */
+    .location-info,
+    .google-page {
+        flex: 1; /* Novo: faz as caixas ocuparem a mesma largura */
+        padding: 1rem;
+    }
+
+    .contact-info h2 {
+      font-size: 1.4rem;
+    }
+}
+
+/* Responsividade: Telas muito pequenas */
+@media (max-width: 480px) {
+    .about {
+        padding: 2rem 1rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}

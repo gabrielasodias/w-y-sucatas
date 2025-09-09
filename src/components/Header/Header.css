@@ -1,0 +1,127 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 15rem;
+    background-color: var(--cinza-claro);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 150px;
+  }
+  
+  .contato-header,
+  .endereco-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--marrom-escuro);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .contato-header a,
+  .endereco-header a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--marrom-escuro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contato-header a:hover,
+  .endereco-header a:hover {
+    color: var(--verde-escuro);
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu a {
+    color: var(--marrom-escuro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+  
+  /* Esconde o menu hambúrguer por padrão em telas maiores */
+  .menu-hamburguer {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--marrom-escuro);
+  }
+  
+  /* Responsividade para telas de tablet e celular */
+  @media (max-width: 900px) {
+
+    .header {
+      padding: 1rem 2rem;
+    }
+    
+    .contato-header,
+    .endereco-header {
+      display: none; /* Esconde contato e endereço em telas menores */
+    }
+  
+    .menu {
+      position: absolute;
+      top: 0;
+      left: -100%; /* Move o menu para fora da tela */
+      width: 70%;
+      height: 100vh;
+      background-color: var(--cinza-claro);
+      padding-top: 6rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    .menu.open {
+      left: 0; /* Desliza o menu para dentro da tela */
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  
+    .menu-hamburguer {
+      display: block; /* Mostra o hambúrguer em telas menores */
+    }
+  }
+  
+  /* Animação do menu hambúrguer */
+  .menu-hamburguer.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-hamburguer.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-hamburguer.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
