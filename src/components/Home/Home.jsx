@@ -2,7 +2,8 @@ import React from 'react'
 import './Home.css'
 import Header from '../Header/Header'
 import About from '../About/About'
-// import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer'
+import WhatsAppButton from '../WhatsAppButton/WhatsAppButton'
 
 function Home () {
     return (
@@ -18,7 +19,9 @@ function Home () {
                 </div>
             </section>
             <About />
-            {/* <Footer /> */}
+            <Footer />
+            <WhatsAppButton />
+
         </>
     )
 }

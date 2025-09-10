@@ -1,20 +1,16 @@
-/* ... seu CSS anterior ... */
-
-/* Estilo geral da seção */
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 8rem 2rem;
     background-color: #fff;
     text-align: center;
 }
 
-/* Container do texto e das novas informações de contato */
 .about-text,
 .contact-info {
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; 
     margin: 0 auto;
 }
 
@@ -30,7 +26,6 @@
     margin-bottom: 1rem;
 }
 
-/* Estilo do novo container de contato */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -72,7 +67,7 @@
     text-decoration: none;
 }
 
-/* Responsividade: Telas maiores que 768px */
+
 @media (min-width: 768px) {
     .about {
         flex-direction: row;
@@ -95,10 +90,10 @@
         margin-top: 0;
     }
 
-    /* Solução para larguras iguais */
+    
     .location-info,
     .google-page {
-        flex: 1; /* Novo: faz as caixas ocuparem a mesma largura */
+        flex: 1;
         padding: 1rem;
     }
 

@@ -1,0 +1,60 @@
+.footer {
+    background-color: var(--verde-escuro); 
+    color: #fff;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+}
+
+/* Seção de Contatos */
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem; /* Espaço entre o contato e o copyright */
+    max-width: 80%;
+}
+
+.contact-footer h1 {
+    color: var(--dourado-suave);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.contact-footer p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.contact-info-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-item a:hover {
+    color: var(--dourado-suave);
+}
+
+.contact-info-item i {
+    color: var(--dourado-suave); /* Ícones em dourado */
+    font-size: 1.2rem;
+}
+
+/* Seção de Copyright */
+.copy-footer {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Linha para separar */
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
